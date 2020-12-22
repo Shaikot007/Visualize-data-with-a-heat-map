@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualize data with a heat map</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Monthly global land surface temperature</h1>
+    <h4 id="description">1753 - 2015: base temperature 8.66℃</h4>
+  </header>
+  <div class="svg-container">
+    <svg class="svg-content" viewBox="0 0 800 500" preserveAspectRatio="none" id="legend">
+      <rect x="175" y="455" rx="2" ry="2" width="15" height="15" style="fill: SteelBlue;" />
+      <text x="195" y="467" style="font-size: 12px;">Temperature variance is -1℃ or less.</text>
+      <rect x="175" y="475" rx="2" ry="2" width="15" height="15" style="fill: LightBlue;" />
+      <text x="195" y="487" style="font-size: 12px;">Temperature variance is 0℃ or less.</text>
+      <rect x="400" y="455" rx="2" ry="2" width="15" height="15" style="fill: Orange;" />
+      <text x="420" y="467" style="font-size: 12px;">Temperature variance is 1℃ or less.</text>
+      <rect x="400" y="475" rx="2" ry="2" width="15" height="15" style="fill: Red;" />
+      <text x="420" y="487" style="font-size: 12px;">Temperature variance is more than 1℃.</text>
+    </svg>
+  </div>
+  <footer>
+    <p>Made by <a href="https://github.com/Shaikot007" target="_blank" rel="noopener noreferrer">Shaikot</a></p>
+  </footer>
+</body>
+
+<script defer src="./script.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</html>

@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  background-color: whitesmoke;
+}
+
+.svg-container { 
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  padding-bottom: 50%; 
+  vertical-align: middle; 
+  overflow: hidden;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.svg-content { 
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header {
+  text-align: center;
+}
+
+footer {
+  margin: 0%;
+  text-align: center;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+footer p a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
