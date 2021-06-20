@@ -26,7 +26,7 @@ fetch(url)
 
     const xAxis = d3.axisBottom(xScale)
                     .tickFormat(d3.format("d"));
-    
+
     const yAxis = d3.axisLeft(yScale)
                     .tickFormat(d3.timeFormat("%B"));
 
@@ -75,8 +75,8 @@ fetch(url)
           }
           else {
             return "Red";
-          } 
-       }) 
+          }
+       })
        .attr("data-year", data => {
           return data["year"];
        })
@@ -96,7 +96,7 @@ fetch(url)
           });
 
           let yearCount = maxYear - minYear;
-          
+
           return (svgWidth - (2 * padding)) / yearCount;
        })
        .attr("x", data => {
@@ -107,14 +107,14 @@ fetch(url)
        })
        .attr("y", data => {
           return yScale(new Date(0, data["month"] -1, 0, 0, 0, 0, 0));
-       })  
+       })
        .on("mouseover", (data, index) => {
           tooltip.transition()
                  .style("opacity", 1)
                  .style("left", data.pageX + "px")
                  .style("top", data.pageY + "px");
 
-          let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];          
+          let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
           document.querySelector("#tooltip").setAttribute("data-year", index["year"]);
           document.querySelector("#tooltip").innerHTML =
